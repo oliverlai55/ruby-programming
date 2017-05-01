@@ -27,3 +27,16 @@ p TEAM
 class myClass
   @@teams = ["A", "B"]
 end
+
+# strip
+str.strip
+# cleans up spaces before and after
+
+# split
+# split string into array
+str.split
+str.split.size
+# check for number of elements
+
+str.split(//)
+# creates an element for each single letter
