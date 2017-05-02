@@ -42,3 +42,28 @@ teams.each do |team, players|
     p "#{player} stars at #{position}"
   end
 end
+
+
+# SELECT Statement
+# Given an array of integers
+# ONly grab the even integers
+(1..10).to_a.select do |x|
+  x.even?
+end
+
+(1..10).to_a.select { |x| x.even? }
+
+(1..10).to_a.select(&:even?)
+# most common
+# & is passing in a block
+
+# Given an array of strings
+# Return only the words that are over 5 letters
+arr = %w(The quick brown fox jumped over the lazy dog)
+
+arr.select { |x| x.length > 5 }
+
+
+# Return all of the vowels
+
+%w(a b c d e f g).select { |v| v =~ /[aeiou ]/ }
