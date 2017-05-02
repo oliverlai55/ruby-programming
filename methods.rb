@@ -45,3 +45,11 @@ Invoice.print_out
 # Instance method callnig by creating new instance
 i = Invoice.new
 i.convert_to_pdf
+
+# Using Default argument
+def stream_movie title:, lang: "ENG"
+  puts title
+  puts lang
+end
+
+stream_movie title: "The English Patient", lang: "FR"
