@@ -24,3 +24,12 @@ team = ["astros", "yankees", "rangers", "mets", "cardinals"]
 teams.join(',')
 # iterates each value, turns into a long string, with a seperator
 # can take , -  &
+
+# push and pop
+teams.push("marlins")
+teams.push("red sox", "blue jays")
+# can push multiple items
+teams.pop
+
+# pops the value and returns it, and store it in the z value
+z = teams.pop
