@@ -67,3 +67,30 @@ arr.select { |x| x.length > 5 }
 # Return all of the vowels
 
 %w(a b c d e f g).select { |v| v =~ /[aeiou ]/ }
+
+# Map
+# Change to Intergers
+["1", "23.0", "0", "4"].map {|x| x.to_i }
+["1", "23.0", "0", "4"].map(&:to_i)
+
+# duplicates every letter within that range
+("a".."g").to_a.map {|i| i * 2}
+
+# set up hash with key value of x to x (interger)
+Hash[[1, 2.1, 3.33, 0.9].map {|x| [x,x.to_i]}]
+
+# Set up hash with each word into array with its respective length value
+Hash[%w(A dynamic open source programming language).map {|x| [x, x.length]}]
+
+
+{:a => "foo", :b => "bar"}.map{|a, b| "#{a}=#{b}"}.join('&')
+{:a => "foo", :b => "bar", :lat => "120.343", :long => "33.212"}.map{|a, b| "#{a}=#{b}"}.join('&')
+
+
+# Add Total together
+# the + is a method, not an operator, to determine sum total
+[2, 31, 5, 622, 7, 3, 45].inject(&:+)
+
+# the * is a method, which is why all this can be passing method in each value
+# multiplication sum
+[2, 31, 5, 622, 7, 3, 45].inject(&:*)
