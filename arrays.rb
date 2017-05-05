@@ -33,3 +33,17 @@ teams.pop
 
 # pops the value and returns it, and store it in the z value
 z = teams.pop
+
+
+# Hash
+# Key value pair collection
+# Modern syntax
+positions = { first_base: "Chris Carter", second_base: "Jose Altuve", short_stop: "Carlos Correa" }
+
+positions = { "first_base" => "Chris Carter", "second_base"  => "Jose Altuve", "short_stop" => "Carlos Correa" }
+
+positions = { :first_base => "Chris Carter", :second_base  => "Jose Altuve", :short_stop => "Carlos Correa" }
+
+# grabbing certain position
+# Ability to know what the key is
+positions[:second_base]
