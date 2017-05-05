@@ -31,3 +31,16 @@ else
   puts "something else"
 end
 # if ruby finds a condition that fits, it will skip everything afterwards
+
+# Compound conditionals
+if x == y && x == z
+  puts "from the if statement"
+end
+
+# if the condition on the left side of the (), then it will not run the 2nd condition on the right
+if (x == 10 && x == z) || x == y
+  puts "from the if statement"
+end
+
+if x == 10 && (x == z && x != y)
+# this is to focus on the parenthesis condition
