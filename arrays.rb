@@ -47,3 +47,40 @@ positions = { :first_base => "Chris Carter", :second_base  => "Jose Altuve", :sh
 # grabbing certain position
 # Ability to know what the key is
 positions[:second_base]
+
+# Delete a hash
+people = {jordan: 32, tiffany: 27, kristine: 10, heather: 29}
+people[:tiffany]
+
+# deletes the hash
+people.delete(:kristine)
+
+# Iterating over Hashes
+people = {jordan: 32, tiffany: 27, kristine: 10, heather: 29}
+# Only print out the keys
+people.each_key do |key|
+  puts key
+end
+
+# print out values
+people.each_value do |value|
+  puts value
+end
+
+# Add Hashes
+people[:leann] = 42
+people.invert
+# changes to show age : name
+
+people_2 = people.invert
+people.merge(people_2)
+# this merges two diff hashes
+
+# converting hashes to array
+people.to_a
+
+people.keys
+# prints out all the keys into an array
+
+people.values
+# prints out all the values into an array
