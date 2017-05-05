@@ -72,6 +72,13 @@ class SmsConnector < ApiConnector
 end
 
 class PhoneConnector < ApiConnector
+  # The Super takes in 1st method from parent class api_logger first
+  # Then it will run the second one inside this class
+  def api_logger
+    super
+    put "Phone Call API connection starting..."
+  end
+
   def send_phone_call
     puts "Sending phone call..."
   end
@@ -92,3 +99,27 @@ phone.send_phone_call
 
 # private methods are methods when they should not be used outside of the class
 # There is also "protected" method, but it is rarely used
+
+# Polymorphism and Super
+class ApiConnector
+  attr_accessor: :title, :description, :url
+
+# Everything in here will run when you set new instance
+  def initialize(title: title, description: description, url: url = "google.com")
+    @title = title
+    @description = description
+    @url = url
+    secret_method
+  end
+
+  def api_logger
+    puts "API Connector starting..."
+  end
+
+  private
+    def secret_method
+      puts "A secret message from inside the parent class"
+    end
+end
+
+phone.api_logger
