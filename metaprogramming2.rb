@@ -49,6 +49,10 @@ class Author
       super
     end
   end
+
+  def respond_to_missing?(method_name, include_private = false)
+    method_name.to_s.start_with?('author_') || super
+  end
 end
 
 author = Author.new
@@ -58,3 +62,52 @@ author.genre = 'Computer Science'
 
 p author.author_genre
 p author.respond_to?(:inspect)
+# The issue is that if you ask a boolean to see if method exists, it will say False
+
+
+class Author
+  define_method("some_method") do
+    puts "Some details"
+  end
+
+  def fiction_details(arg)
+    puts "Fiction"
+    puts arg
+    puts "asdfasdf"
+  end
+
+  def coding_details(arg)
+    puts "Coding"
+    puts arg
+    puts "asdfasdf"
+  end
+
+  def history_details(arg)
+    puts "History"
+    puts arg
+    puts "asdfasdf"
+  end
+end
+
+
+#  MUCH cleaner method
+class Author
+  genres = %w(fiction coding history)
+  # create an array of strings without quotation and commas
+
+  genres.each do |genre|
+    define_method("#{genre}_details") do |arg|
+      puts "Genre: #{genre}"
+      puts arg
+      puts genre.object_id
+    end
+  end
+end
+
+author = Author.new
+author.some_method
+author.coding_details("Cal Newport")
+p author.respond_to?(:coding_details)
+
+# define method creates method at runtime
+# method missing doesnt trigger until the whole method has gone through the cycle
