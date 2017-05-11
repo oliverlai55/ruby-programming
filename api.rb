@@ -26,7 +26,7 @@ puts response.code
 puts response.message
 # HTTP protocal status message
 puts response.headers.inspect
-
+ 
 # Custom API
 class StackExchange
   include HTTParty
