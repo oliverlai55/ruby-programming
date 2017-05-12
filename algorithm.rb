@@ -21,3 +21,22 @@ end
 
 a = [1, 4, 1, 3, 4, 1, 3, 3]
 p bubble_sort(a)
+
+
+# Quicksort
+class Array
+  def quicksort
+    return [] if empty?
+
+    # [34, 2, 1, 5, 3]
+    pivot = delete_at(rand(size))
+    # grab 2 values
+    left, right = partition(&pivot.method(:>))
+
+    # splat, recursive
+    return *left.quicksort, pivot, *right.quicksort
+  end
+end
+
+arr = [34, 2, 1, 5, 3]
+p arr.quicksort
