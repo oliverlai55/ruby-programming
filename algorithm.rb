@@ -40,3 +40,6 @@ end
 
 arr = [34, 2, 1, 5, 3]
 p arr.quicksort
+
+
+# Merge Sort
