@@ -65,6 +65,8 @@ def merge(left, right)
     [right.first] + merge(left, right[1..right.length])
   end
 end
+
+arr = [4, 1, 5, 1, 33, 312]
     # left = [1, 4, 1, 3]
     # right = [100, 101]
     # newly_merged = [1] + ...[4] +
