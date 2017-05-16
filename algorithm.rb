@@ -41,5 +41,17 @@ end
 arr = [34, 2, 1, 5, 3]
 p arr.quicksort
 
+# Merge sort
+def merge_sort(list)
+end
 
-# Merge Sort
+def merge(left, right)
+  if left.empty?
+    right
+  elsif right.empty?
+    left
+  elsif left.first < right.first
+    [left.first] + merge(left[1..left.length], right)
+
+    # left = [1, 4, 1, 3]
+    # right = [100, 101]
