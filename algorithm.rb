@@ -22,7 +22,7 @@ end
 a = [1, 4, 1, 3, 4, 1, 3, 3]
 p bubble_sort(a)
 
-
+ 
 # Quicksort
 class Array
   def quicksort
