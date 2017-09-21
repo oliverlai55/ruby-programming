@@ -23,7 +23,7 @@ x = void_method
 # won't return anything
 
 y = method_with_return
-# will return hey there 2
+# will return hey there 2 
 # hash rocket is what returns from a method
 
 # Class vs Instance Method
