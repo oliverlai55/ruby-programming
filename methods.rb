@@ -9,6 +9,9 @@ def second_baseball_team_list
   ["Yankees", "Mets"]
 end
 
+# Calling it
+second_baseball_team_list
+
 # If no return, it may return nil
 # if Add return, it will return a variable
 def void_method
@@ -23,7 +26,7 @@ x = void_method
 # won't return anything
 
 y = method_with_return
-# will return hey there 2 
+# will return hey there 2
 # hash rocket is what returns from a method
 
 # Class vs Instance Method
