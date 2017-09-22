@@ -53,10 +53,12 @@ Invoice.print_out
 i = Invoice.new
 i.convert_to_pdf
 
-# Using Default argument
-def stream_movie title:, lang: "ENG"
-  puts title
-  puts lang
+
+def full_name first_name, last_name
+  first_name + " " + last_name
 end
 
-stream_movie title: "The English Patient", lang: "FR"
+puts full_name "Jordan", "Hudgens"
+
+
+# Method argument notes are on top of this directory
