@@ -1,11 +1,12 @@
 first_name = lambda { !first, last! first  + " " + last }
 p first_name["jordan", "lai"]
 
-
+# Stabby syntax, more common
 first_name = ->(first, last) { first  + " " + last }
 p first_name["jordan", "lai"]
 
 # Lambdas vs Procs
+# Lamdas count the arguments passed to it, Procs do not
 
 # Argument Count
 full_name = lambda { !first, last! first + " " + last }
