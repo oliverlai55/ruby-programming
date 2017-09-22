@@ -43,8 +43,8 @@ teams.each do |team, players|
   end
 end
 
-
-# SELECT Statement
+# Enumerators
+# SELECT Statement selects items
 # Given an array of integers
 # ONly grab the even integers
 (1..10).to_a.select do |x|
@@ -55,18 +55,21 @@ end
 
 (1..10).to_a.select(&:even?)
 # most common
-# & is passing in a block
+# & is passing in a block, expecting an array of values, collection
+# bypass having iterator variable
 
 # Given an array of strings
 # Return only the words that are over 5 letters
 arr = %w(The quick brown fox jumped over the lazy dog)
+# %w converts each word into an array
 
 arr.select { |x| x.length > 5 }
 
 
 # Return all of the vowels
 
-%w(a b c d e f g).select { |v| v =~ /[aeiou ]/ }
+%w(a b c d e f g).select { |v| v =~ /[aeiou]/ }
+# =~ regex selector
 
 # Map
 # Change to Intergers
