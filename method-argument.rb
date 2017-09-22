@@ -28,3 +28,13 @@ def sms_generator api_key:, num:, msg:, locale:
 end
 
 sms_generator num: 1234, api_key: '23423', locale: 'US', msg: 'hi'
+
+
+# Default argument
+# Adding default argument in case its very common to have it
+def stream_movie title:, lang: "ENG"
+  puts title
+  puts lang
+end
+
+stream_movie title: "The English Patient", lang: "FR"

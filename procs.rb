@@ -1,3 +1,5 @@
+# methods that can be stored inside of variables
+
 full_name = Proc.new { !first, last! first + " " + last }
 # Sets first and last as variables
 full_name["Jordan", "Hudgens"]

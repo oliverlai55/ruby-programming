@@ -3,6 +3,7 @@ def baseball_team_list
 end
 
 # If you want to put a conditional, then you can add 'return'
+# The function will return and stop running lines fater return, goes straight to end
 def second_baseball_team_list
   x = 15
   return ["A's", "Angels", "Astros"] if x == 10
@@ -12,7 +13,7 @@ end
 # Calling it
 second_baseball_team_list
 
-# If no return, it may return nil
+# If no return, it may return '=> nil'
 # if Add return, it will return a variable
 def void_method
   puts "hey there"
@@ -26,10 +27,13 @@ x = void_method
 # won't return anything
 
 y = method_with_return
+# Variable is set to return "hey there"
 # will return hey there 2
 # hash rocket is what returns from a method
 
 # Class vs Instance Method
+# Class method can just use dot notation to call method
+# Instance method you have to create a new instance first to call it
 class Invoice
   # Class method
   def self.print_out
@@ -49,10 +53,12 @@ Invoice.print_out
 i = Invoice.new
 i.convert_to_pdf
 
-# Using Default argument
-def stream_movie title:, lang: "ENG"
-  puts title
-  puts lang
+
+def full_name first_name, last_name
+  first_name + " " + last_name
 end
 
-stream_movie title: "The English Patient", lang: "FR"
+puts full_name "Jordan", "Hudgens"
+
+
+# Method argument notes are on top of this directory
