@@ -1,7 +1,7 @@
 # While Loop
 i = 0
 
-while i < 10
+while i <= 10
   puts "Hey there"
   i += 1
 end
@@ -91,7 +91,7 @@ Hash[%w(A dynamic open source programming language).map {|x| [x, x.length]}]
 
 
 # Add Total together
-# the + is a method, not an operator, to determine sum total
+# in Ruby the + (or *) is a method, not an operator, to determine sum total
 [2, 31, 5, 622, 7, 3, 45].inject(&:+)
 
 # the * is a method, which is why all this can be passing method in each value
